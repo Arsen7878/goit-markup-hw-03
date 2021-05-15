@@ -1,0 +1,282 @@
+/* Основной цвет текста #212121 */
+/* Основной цвет фона #FFFFFF */
+/* Вторичный цвет текста #757575 */
+/* Вторичный цвет фона #2F303A */
+/* Единичный фон #F5F4FA */
+/* Цвет ссылок при ховере, фокусе,  а также для логотипа */
+/* Цвет при ховере, фокусе кнопки #2196F3 */
+/* Цвет ссылок в футере rgba(255, 255, 255, 0.6) */
+/* Цвет обрамления галереи #eeeeee */
+
+:root {
+  --primary-text-color: #212121;
+  --primary-background-color: #ffffff;
+  --secondary-text-color: #757575;
+  --secondary-background-color: #2f303a;
+  --single-background-color: #f5f4fa;
+  --link-hover-focus-web-color: #2196f3;
+  --logo-color: #000000;
+  --footer-link-text-color: rgba(255, 255, 255, 0.6);
+  --galery-background: #eeeeee;
+}
+/* Тело страницы */
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Убираем ненависные точки у списков */
+.list {
+  list-style: none;
+}
+
+/* Шапка */
+/* Логотип */
+.logo {
+  color: var(--logo-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+/* Цвет для Web */
+.web {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Навигационные ссылки */
+.site-nav .link {
+  color: inherit;
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* Навигационные ссылки при ховере и фокусе */
+.site-nav .link:focus,
+.site-nav .link:hover {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Оборачиваю в div контакты хедера */
+
+.contacts .link {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* Контактные ссылки при ховере и фокусе */
+.contacts .link:focus,
+.contacts .link:hover {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Подсветка текущей старницы  */
+
+/* Секция герой */
+.hero {
+  background-color: var(--secondary-background-color);
+  color: var(--primary-background-color);
+  text-align: center;
+}
+.site-nav .link.current {
+  color: var(--link-hover-focus-web-color);
+}
+/* Заголовок-герой */
+.title-hero {
+  color: var(--primary-background-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+/* Кнопка в "герое" */
+.hero .button {
+  background-color: var(--link-hover-focus-web-color);
+  color: var(--primary-background-color);
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/* Кнопка при ховере и фокусе */
+.button:hover,
+.button:focus {
+  background-color: var(--primary-background-color);
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Секция "Особенности" */
+/* Скрываем заголовок */
+.invisible {
+  display: none;
+}
+
+/* Заголовок элемента списка особенностей */
+.features-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* Оформляем текст особенностей */
+.features-text {
+  color: var(--secondary-text-color);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Секция "Вид дейтельности" */
+/* Заголовок секции */
+.activity-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Секция "Наша команда" */
+.team {
+  background-color: var(--single-background-color);
+}
+/* Имя */
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+.position {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Подвал */
+.footer-page {
+  background-color: var(--secondary-background-color);
+  color: var(--primary-background-color);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Логотип подвала */
+
+/* Весь логотип футера */
+.footer-logo {
+  color: var(--primary-background-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+/* Часть "web" футера */
+.footer-web {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Логотип-ссылка в футере */
+.footer-link {
+  text-decoration: none;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* Оформление адреса */
+.footer-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Оформление ссылок адреса */
+.footer-address .link {
+  color: var(--footer-link-text-color);
+  text-decoration: none;
+}
+
+/* Ссылки адреса при ховере и футере */
+.footer-address .link:hover,
+.footer-address .link:focus {
+  color: var(--link-hover-focus-web-color);
+}
+
+/* СТРАНИЦА ПОРТФОЛИО  */
+/* МЕИН */
+/* Секция "Портфолио" */
+
+.filter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+}
+/* Кнопки фильтра */
+.filter .button {
+  background-color: var(--single-background-color);
+
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Кнопки фильтра при ховере и фокусе */
+.filter .button:focus,
+.filter .button:hover {
+  background-color: var(--link-hover-focus-web-color);
+  color: var(--primary-background-color);
+}
+
+/* Скрываем подчеркивание и цвет ссылок галереи */
+.galery .link {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--galery-background);
+}
+
+/* Задаём размер шрифта заголовкам галереи*/
+.galery-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+/* Задаём размер шрифта для классов галереи */
+.filter-unit {
+  color: var(--secondary-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
