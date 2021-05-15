@@ -31,9 +31,12 @@ body {
 /* Убираем ненависные точки у списков */
 .list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Шапка */
+
 /* Логотип */
 .logo {
   color: var(--logo-color);
@@ -98,7 +101,9 @@ body {
 /* Заголовок-герой */
 .title-hero {
   color: var(--primary-background-color);
-
+  outline: 3px solid teal;
+  margin-top: 0px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -115,8 +120,15 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 32px;
+  display: inline-block;
+  text-align: center;
 }
 
 /* Кнопка при ховере и фокусе */
@@ -279,4 +291,12 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
+}
+
+/* ПОЗИЦИОНИРОВАНИЕ */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
