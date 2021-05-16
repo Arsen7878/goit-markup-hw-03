@@ -8,6 +8,8 @@
 /* Цвет ссылок в футере rgba(255, 255, 255, 0.6) */
 /* Цвет обрамления галереи #eeeeee */
 
+
+/* Утилиты для страниц */
 :root {
   --primary-text-color: #212121;
   --primary-background-color: #ffffff;
@@ -26,6 +28,7 @@ body {
 
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  
 }
 
 /* Убираем ненависные точки у списков */
@@ -35,8 +38,37 @@ body {
   padding: 0px;
 }
 
-/* Шапка */
+/* Размеры и отступы контейнеров */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
+
+/* Вертикальные падинги для всех секций страниц */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Обнуляем марджины заголовком, абзацев и списков */
+h1,h2,h3,h4,p,ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Шапка старницы */
+.header-page {
+  outline: auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ECECEC;
+
+}
 /* Логотип */
 .logo {
   color: var(--logo-color);
@@ -53,7 +85,16 @@ body {
 }
 
 /* Навигационные ссылки */
-.site-nav .link {
+.nav {
+  display: flex;
+  margin-left: 93px;
+  
+}
+.nav .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.header-page .link {
   color: inherit;
   text-decoration: none;
 
@@ -63,6 +104,9 @@ body {
   letter-spacing: 0.02em;
 }
 
+
+
+
 /* Навигационные ссылки при ховере и фокусе */
 .site-nav .link:focus,
 .site-nav .link:hover {
@@ -70,8 +114,17 @@ body {
 }
 
 /* Оборачиваю в div контакты хедера */
+.contacts-items {
+  display: flex;
+  margin-left: auto;
+}
 
-.contacts .link {
+.contacts-items .contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+
+
+.contacts-items .link {
   color: var(--secondary-text-color);
   text-decoration: none;
 
@@ -82,8 +135,8 @@ body {
 }
 
 /* Контактные ссылки при ховере и фокусе */
-.contacts .link:focus,
-.contacts .link:hover {
+.contacts-items .link:focus,
+.contacts-items .link:hover {
   color: var(--link-hover-focus-web-color);
 }
 
@@ -101,8 +154,6 @@ body {
 /* Заголовок-герой */
 .title-hero {
   color: var(--primary-background-color);
-  outline: 3px solid teal;
-  margin-top: 0px;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -112,6 +163,7 @@ body {
 }
 /* Кнопка в "герое" */
 .hero .button {
+  display: inline-block;
   background-color: var(--link-hover-focus-web-color);
   color: var(--primary-background-color);
   cursor: pointer;
@@ -144,8 +196,22 @@ body {
   display: none;
 }
 
+.features-list {
+  display: flex;
+}
+
+.features-list-items {
+  width: 270px;
+}
+
+.features-list-items + .features-list-items {
+  margin-left: 30px;
+}
+
 /* Заголовок элемента списка особенностей */
 .features-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -169,14 +235,41 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.activity-list {
+  display: flex;
+}
+
+.activity-list-item + .activity-list-item {
+  margin-left: 30px;
 }
 
 /* Секция "Наша команда" */
 .team {
   background-color: var(--single-background-color);
+  text-align: center;
+}
+
+
+.team-items {
+  display: flex;
+
+  
+}
+
+.image {
+  margin-bottom: 30px;
+}
+
+.team-item + .team-item {
+margin-left: 30px;
 }
 /* Имя */
 .name {
+margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -212,6 +305,10 @@ body {
 
 /* Часть "web" футера */
 .footer-web {
+  display: inline-block;
+margin-top: 60px;
+margin-bottom: 20px;
+
   color: var(--link-hover-focus-web-color);
 }
 
@@ -231,6 +328,18 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+.adress-title {
+margin-bottom: 9px;
+}
+
+.footer-contact-mail {
+  margin-bottom: 9px;
+}
+
+.footer-contact-tel {
+padding-bottom: 60px;
+}
+
 
 /* Оформление ссылок адреса */
 .footer-address .link {
@@ -293,10 +402,5 @@ body {
   line-height: 1.87;
 }
 
-/* ПОЗИЦИОНИРОВАНИЕ */
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
