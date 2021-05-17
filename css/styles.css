@@ -58,15 +58,16 @@ h1,h2,h3,h4,p,ul {
   margin-bottom: 0px;
 }
 
-/* Шапка старницы */
-.header-page {
-  outline: auto;
+/* Изменяем тип картинок для удаления зазоров */
+img {
+  display: block;
 }
 
+/* Шапка старницы */
 .header-container {
   display: flex;
   align-items: center;
-  border: 1px solid #ECECEC;
+  border-bottom: 1px solid #ECECEC;
 
 }
 /* Логотип */
@@ -90,10 +91,13 @@ h1,h2,h3,h4,p,ul {
   margin-left: 93px;
   
 }
+
+/* Маржины навигационных ссылок */
 .nav .nav-item + .nav-item {
   margin-left: 50px;
 }
 
+/* Навигационные ссылки хедера */
 .header-page .link {
   color: inherit;
   text-decoration: none;
@@ -103,8 +107,6 @@ h1,h2,h3,h4,p,ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
-
 
 
 /* Навигационные ссылки при ховере и фокусе */
@@ -252,11 +254,16 @@ h1,h2,h3,h4,p,ul {
   text-align: center;
 }
 
-
+/* Изменяем тип списка на флекс */
 .team-items {
   display: flex;
+}
 
+.team-item {
   
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--primary-background-color);
 }
 
 .image {
@@ -266,6 +273,7 @@ h1,h2,h3,h4,p,ul {
 .team-item + .team-item {
 margin-left: 30px;
 }
+
 /* Имя */
 .name {
 margin-bottom: 10px;
@@ -274,7 +282,10 @@ margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.19;
 }
+
 .position {
+margin-bottom: 30px;
+
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -306,8 +317,8 @@ margin-bottom: 10px;
 /* Часть "web" футера */
 .footer-web {
   display: inline-block;
-margin-top: 60px;
-margin-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 
   color: var(--link-hover-focus-web-color);
 }
@@ -358,6 +369,10 @@ padding-bottom: 60px;
 /* Секция "Портфолио" */
 
 .filter {
+display: flex;
+justify-content: center;
+margin-bottom: 50px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -365,10 +380,20 @@ padding-bottom: 60px;
 }
 /* Кнопки фильтра */
 .filter .button {
+  display: flex;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+
   background-color: var(--single-background-color);
 
   font-family: inherit;
   cursor: pointer;
+}
+
+/* Отступы для кнопок фильтра портфолио */
+.filter-button + .filter-button {
+  margin-left: 8px;
 }
 
 /* Кнопки фильтра при ховере и фокусе */
@@ -378,15 +403,37 @@ padding-bottom: 60px;
   color: var(--primary-background-color);
 }
 
+/* Создаем флекс-контейнер для элементов портфоли */
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -15px;
+
+}
+
+/* Отступы для элементов галереи и рамки */
+.galery-item {
+  width: 370px;
+  margin: 15px;
+  border: 1px solid #EEEEEE;
+ 
+}
+
+/* Маржин картинок */
+.galery-item-img {
+  margin-bottom: 20px;
+}
 /* Скрываем подчеркивание и цвет ссылок галереи */
 .galery .link {
   text-decoration: none;
   color: inherit;
-  border: 1px solid var(--galery-background);
+  
 }
 
 /* Задаём размер шрифта заголовкам галереи*/
 .galery-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -402,5 +449,11 @@ padding-bottom: 60px;
   line-height: 1.87;
 }
 
+/* Маржины для подписей картинок-ссылок портфолио */
+.photo-info {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 24px;
+}
 
 
