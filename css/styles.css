@@ -43,6 +43,7 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 
 
@@ -64,10 +65,15 @@ img {
 }
 
 /* Шапка старницы */
+/* Рамка футера */
+.header-page {
+border-bottom: 1px solid #ECECEC;
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ECECEC;
+  
 
 }
 /* Логотип */
@@ -86,19 +92,31 @@ img {
 }
 
 /* Навигационные ссылки */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   margin-left: 93px;
   
 }
 
+.nav-item {
+  display: block;
+  padding: 32px 0;
+}
 /* Маржины навигационных ссылок */
 .nav .nav-item + .nav-item {
   margin-left: 50px;
+  
 }
 
 /* Навигационные ссылки хедера */
 .header-page .link {
+  padding: 24px 0;
+
   color: inherit;
   text-decoration: none;
 
@@ -149,6 +167,8 @@ img {
   background-color: var(--secondary-background-color);
   color: var(--primary-background-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .site-nav .link.current {
   color: var(--link-hover-focus-web-color);
@@ -194,9 +214,20 @@ img {
 
 /* Секция "Особенности" */
 /* Скрываем заголовок */
-.invisible {
-  display: none;
+  .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 
 .features-list {
   display: flex;
@@ -230,6 +261,10 @@ img {
 }
 
 /* Секция "Вид дейтельности" */
+.activity {
+  padding-top: 0px;
+}
+
 /* Заголовок секции */
 .activity-title,
 .team-title {
@@ -264,17 +299,21 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-background-color);
+  width: 270px;
 }
 
-.image {
-  margin-bottom: 30px;
-}
+
 
 .team-item + .team-item {
 margin-left: 30px;
 }
 
 /* Имя */
+.team-item-name {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .name {
 margin-bottom: 10px;
 
@@ -284,7 +323,7 @@ margin-bottom: 10px;
 }
 
 .position {
-margin-bottom: 30px;
+
 
   color: var(--secondary-text-color);
   font-weight: 400;
@@ -294,6 +333,9 @@ margin-bottom: 30px;
 
 /* Подвал */
 .footer-page {
+padding-top: 60px;
+padding-bottom: 60px;
+
   background-color: var(--secondary-background-color);
   color: var(--primary-background-color);
 
@@ -317,15 +359,15 @@ margin-bottom: 30px;
 /* Часть "web" футера */
 .footer-web {
   display: inline-block;
-  margin-top: 60px;
-  margin-bottom: 20px;
-
   color: var(--link-hover-focus-web-color);
 }
 
 /* Логотип-ссылка в футере */
 .footer-link {
+  display: block;
+  margin-bottom: 20px;
   text-decoration: none;
+  
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -346,11 +388,6 @@ margin-bottom: 9px;
 .footer-contact-mail {
   margin-bottom: 9px;
 }
-
-.footer-contact-tel {
-padding-bottom: 60px;
-}
-
 
 /* Оформление ссылок адреса */
 .footer-address .link {
@@ -416,14 +453,11 @@ margin-bottom: 50px;
 .galery-item {
   width: 370px;
   margin: 15px;
-  border: 1px solid #EEEEEE;
+  
  
 }
 
-/* Маржин картинок */
-.galery-item-img {
-  margin-bottom: 20px;
-}
+
 /* Скрываем подчеркивание и цвет ссылок галереи */
 .galery .link {
   text-decoration: none;
@@ -451,9 +485,13 @@ margin-bottom: 50px;
 
 /* Маржины для подписей картинок-ссылок портфолио */
 .photo-info {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 
